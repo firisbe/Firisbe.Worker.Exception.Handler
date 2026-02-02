@@ -1,0 +1,35 @@
+## [ Visual Studio ]
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.sln.docstates
+
+## [ NuGet ]
+packages/
+!packages/repositories.config
+*.nupkg
+# NuGet paketlerini repoya atmıyoruz, proje açıldığında otomatik çekilmeli (restore)
+
+## [ Build Results ]
+[Rr]elease/
+[Dd]ebug/
+x64/
+x86/
+bld/
+[Log]s/
+[Ee]rrors/
+
+## [ Unit Test ]
+TestResults/
+*.trx
+
+## [ OS Specific ]
+.DS_Store
+Thumbs.db
+
+## [ User Specific ]
+*.suo
+*.user
+*.userprefs
