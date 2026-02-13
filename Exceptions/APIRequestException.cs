@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Firisbe.Worker.Exception.Handler.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace Firisbe.Worker.Exception.Handler.Exceptions
 {
     public class APIRequestException : HttpRequestException
     {
+        public ErrorCategory ErrorCategory = ErrorCategory.ExternalSystem;
         public APIRequestException(string Message,string path,HttpStatusCode statusCode) : base(Message + $" Path : {path} Status Code :{statusCode.ToString()}")
         {
         }

@@ -33,7 +33,7 @@ namespace Firisbe.Worker.Handler.Abstracts
             return ex switch
             {
                 FirisbeException
-                    => ErrorCategory.Business,
+                    => ((FirisbeException)ex).Category,
 
                 HttpRequestException
                     => ErrorCategory.Infrastructure,

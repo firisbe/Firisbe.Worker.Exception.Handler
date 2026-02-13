@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace Firisbe.Worker.Exception.Handler.Exceptions
 {
-    public class RecordNotFoundException : FirisbeException
+    public class ServiceNotInitalizedException : FirisbeException
     {
-        public RecordNotFoundException(string Message,string PrimaryKeyId,string ObjectType) : base(Message + $" Primary Key Id : {PrimaryKeyId} , Object Type: {ObjectType}")
+        public ServiceNotInitalizedException(string Message) : base(Message)
         {
+            base.Category = ErrorCategory.Internal;
         }
     }
 }
