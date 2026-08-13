@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Firisbe.Worker.Exception.Handler.Exceptions
 {
-    public class APIRequestException : HttpRequestException
+    public class APIRequestException : FirisbeException
     {
         public ErrorCategory ErrorCategory = ErrorCategory.ExternalSystem;
         public APIRequestException(string Message,string path,HttpStatusCode statusCode) : base(Message + $" Path : {path} Status Code :{statusCode.ToString()}")
