@@ -11,7 +11,7 @@ namespace Firisbe.Worker.Handler.Abstracts
 {
     public abstract class BaseWorkerProcessor
     {
-        protected async Task ExecuteBatchSafelyAsync<T>(
+        protected async Task ExecuteActionAsync<T>(
         Func<Task> action,
         IErrorPolicy<T> errorPolicy,
         Func<System.Exception, T> contextFactory) where T : ErrorContext
